@@ -1,0 +1,95 @@
+openapi: 3.0.0
+info:
+  title: Library Management API
+  version: 1.0.0
+  description: Library Management REST API
+servers:
+  - url: http://localhost:3000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+  /api/auth/register:
+    post:
+      summary: Register user
+  /api/auth/login:
+    post:
+      summary: Login user
+  /api/auth/profile:
+    get:
+      summary: Get profile
+      security:
+        - bearerAuth: []
+    put:
+      summary: Update profile
+      security:
+        - bearerAuth: []
+  /api/books:
+    get:
+      summary: Get all books
+      security:
+        - bearerAuth: []
+    post:
+      summary: Add book
+      security:
+        - bearerAuth: []
+  /api/books/{id}:
+    get:
+      summary: Get book
+      security:
+        - bearerAuth: []
+    put:
+      summary: Update book
+      security:
+        - bearerAuth: []
+    delete:
+      summary: Delete book
+      security:
+        - bearerAuth: []
+  /api/books/search:
+    get:
+      summary: Search books
+      security:
+        - bearerAuth: []
+  /api/books/{id}/borrow:
+    post:
+      summary: Borrow book
+      security:
+        - bearerAuth: []
+  /api/books/{id}/return:
+    post:
+      summary: Return book
+      security:
+        - bearerAuth: []
+  /api/transactions:
+    get:
+      summary: Get all transactions
+      security:
+        - bearerAuth: []
+  /api/transactions/my:
+    get:
+      summary: Get my transactions
+      security:
+        - bearerAuth: []
+  /api/users:
+    get:
+      summary: Get all users
+      security:
+        - bearerAuth: []
+  /api/users/{id}:
+    get:
+      summary: Get user
+      security:
+        - bearerAuth: []
+    delete:
+      summary: Delete user
+      security:
+        - bearerAuth: []
+  /api/users/{id}/role:
+    put:
+      summary: Update user role
+      security:
+        - bearerAuth: []
