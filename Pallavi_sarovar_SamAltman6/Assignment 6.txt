@@ -1,3 +1,0 @@
-Assignment 6 :- Library Management API
-
-Link :- https://itm-library-management-api.netlify.app/
